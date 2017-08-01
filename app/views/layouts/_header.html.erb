@@ -1,0 +1,12 @@
+<header>
+  <p><%= link_to "Home", root_path %></p>
+  <p><%= link_to "Index", users_path %></p>
+  
+    <% if logged_in? %>
+      <p><%= link_to "Your profile", current_user %></p>
+      <p><%= link_to "Log out", logout_path, method: :delete %></p>
+    <% else %>
+      <p><%= link_to "Log In", login_path %></p>
+    <% end %>
+      
+</header>
