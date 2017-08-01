@@ -1,0 +1,13 @@
+<h1>List of posts by members</h1>
+
+<ul>
+<% @posts.each do |post|%>
+  <li>
+    <%= post.content %>
+    <br>
+    <% if logged_in? %>
+    by <em><%= post.author %></em>
+    <% end %>
+  </li>
+<%end%>
+</ul>

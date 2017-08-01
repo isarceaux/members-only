@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
 
-  attr_accessor :remember_token
+  has_many :posts
 
+  attr_accessor :remember_token
   
   #2 fonctions utilisées par la méthode remember
   class << self
